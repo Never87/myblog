@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Never87">
+    <meta name="keywords" content="blog, 博客, never87, Never87, Ckcolanev87, CkcolanevES">
+    <meta name="description" content="private blog">
+    <meta http-equiv="refresh" content="60">
+    <title>Never87's base</title>
+    <link rel="icon" href="./static/images/Ckcolanev87.ico" type="image/x-icon">
+    <style>
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        /* Animated gradient background */
+        background: linear-gradient(120deg,rgb(254, 253, 253),rgb(229, 222, 222), rgb(249, 251, 246),rgb(252, 253, 252));
+        background-size: 400% 400%;
+        animation: gradientBG 60s ease infinite;
+        color: #2d2d2d;
+        min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+        /* Ensure smooth loop by matching 0% and 100% */
+    }
+    
+    p {
+        font-family: 'Fira Sans', 'Nunito', 'Segoe UI', 'Arial', sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+        text-shadow: 0 1px 2px rgba(200,200,200,0.15);
+        color: #444;
+    }
+
+
+    h1 {
+        font-family: 'Montserrat', 'Segoe UI', 'Arial Black', 'Arial', sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-shadow: 0 2px 8px rgba(106,17,203,0.12);
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        color: rgb(224, 224, 224);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .dropdown-content-large {
+        display: block;
+        position: absolute;
+        left: 0%;
+        top: 130%;
+        transform: translateX(0%);
+        background-color: rgba(32, 32, 32, 0.91);
+        color: white;
+        padding: 0rem 0;
+        min-width: 200px;
+        max-width: 90vw;
+        width: auto;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+        white-space: nowrap;
+    }
+
+    .dropdown:hover .dropdown-content-large {
+        max-height: 2000px; /* 足够大即可 */
+        opacity: 1;
+        padding: 0rem 0;
+    }
+
+    .dropdown-column {
+        padding: 0.5rem;
+    }
+
+    .dropdown-column h4 {
+        margin-bottom: 0.5rem;
+        color: #6a11cb;
+    }
+
+    .dropdown-column ul {
+        list-style: none;
+        margin-left: 0rem;
+        padding: 0;
+    }
+
+    .dropdown-column ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .dropdown-column ul li a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .dropdown-column ul li a:hover {
+        color: #6a11cb;
+    }
+
+    /* Header Styles */
+    header {
+        background: linear-gradient(135deg,rgb(32, 32, 32),rgb(60, 60, 60));
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Navigation Styles */
+    nav {
+        background: linear-gradient(135deg, rgb(32, 32, 32), rgb(60, 60, 60));
+        color: #2a2a2a;
+        padding: 0.5rem 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        margin-left: 15rem;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0;
+        font-size: 1.1rem;
+        letter-spacing: 0.05em;
+    }
+
+    nav ul li a {
+        color:rgb(224, 224, 224);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #6a11cb;
+    }
+
+    /* Section Styles */
+    section {
+        padding: 2rem;
+        margin: 1rem auto;
+        max-width: 800px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    section h2 {
+        color: #6a11cb;
+        margin-bottom: 1rem;
+    }
+
+    section p {
+        margin-bottom: 1rem;
+    }
+
+    section img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+
+    /* Article Styles */
+    article {
+        margin-bottom: 2rem;
+    }
+
+    article h3 {
+        color: #2575fc;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    article p {
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.1em;
+        font-family: 'KaiTi', '楷体', 'STKaiti', 'KaiTi_GB2312', serif;
+        font-size: 1.25rem;
+    }
+
+    /* Contact Section Styles */
+    #contact ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #contact ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    #contact ul li a {
+        color: #2575fc;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    #contact ul li a:hover {
+        color: #6a11cb;
+    }
+
+    /* Footer Styles */
+    footer {
+        text-align: center;
+        background: linear-gradient(135deg, rgb(32, 32, 32), rgb(60, 60, 60));
+        color: white;
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+
+    footer p {
+        margin: 0;
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Welcome to Never87's Blog</h1>
+        <p>My daily dose of thoughts, ideas, and inspiration.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <div class="dropdown-content-large">
+                    <div class="dropdown-column">
+                        <h4>Projects</h4>
+                        <ul>
+                            <li><a href="./shootgame.html">Shoot Game</a></li>    
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stickytopics">Sticky topics</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm Never87, a passionate blogger and a programming noob sharing my works here. Stay tuned for exciting content!</p>
+        
+    </section>
+
+    <section id="stickytopics">
+        <h2>Sticky topics</h2>
+        <article>
+            <h3>First time to create a blog website</h3>
+            <p>&ensp;&ensp;&ensp;&ensp;简单说明一下我为什么做这个博客网站。从头讲起吧，考上那啥创新班后，我便按照和同学的约定，搞起了信竞——高中五大学科竞赛之一，即Olympiad in Informatics，开始呢，我心想，我数学这么好，又有不少编程基础，信竞不是轻轻松松？可现实是，完全不同......包括其他四大竞赛，参加的选手基本上都从小学、初中开始学起，有着非常扎实的功底。而我呢？高中了，关于算法，啥也不会，好吧，看看其中有关数学的部分，“嗯——我觉得应该好学，毕竟我也是有......”：线性代数，微积分，数论，群论，图论......“啊？！哦！应该是我看走眼了，再看一眼......”:数学归纳法，概率论，博弈论，求解近似界......“啊！不好！是真的！我们没救啦！”。不过呢这些也算好，只是有点多，不至于那么难，然后我就学呀学学呀学，欸！学了不少，一比赛——25分......我看到题我都傻眼了，这啥呀？这怎么和我想得不一样？！！彼时，我同学给我发来了一个链接，一个小学生直接跳过我好不容易做出个答案还做错的那道他认为的“简单题”，一口气把后面3到难题做出来了......哈，哈哈，有点想笑，又笑不出来，想笑是因为我看到一个傻子4个小时才做了25分（总分400分），又笑不出来，是因为那个傻子就是我......然后我就翻了翻排行榜，想看看大佬都是怎么写代码的，欸，就这么一翻，又翻到了以为初中生做的博客！博客中有一篇文章，说可以怎么怎么弄让你的博客更好看，看的我想骂人，但又没理由......然后过了不知多久，我又想起这事儿来，这时我又正好有空，于是就做了这么个博客，毕竟“人家有的东西我也要有”的真理可是传承了几千年哪，额......然后我就做了这么个东西。好了就写这些，欸！等下，你可能想知道为什么我要用英文界面，啊...这是因为我怕同学点到这看到这篇文章，我怕丢人......</p>
+
+            <!--<a href="#">Read more...</a>-->
+            <!-- <img src="post1.jpg" alt="Post 1"> -->
+        </article>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out via email or follow me on social media!</p>
+        <ul>
+            <li>QQ mail: <a href="3581016417@qq.com" target="_blank">3581016417@qq.com</a></li>
+            <!-- <li>Gmail: <a href="ckcolanev872025@gmail.com">ckcolanev872025@gmail.com</a></li> -->
+            <li>Github: <a href="https://github.com/Never87" target="_blank">Never87</a></li>
+            <!--         
+                <li>Twitter: <a href="https://twitter.com/never87" target="_blank">@never87</a></li>
+                <li>Instagram: <a href="https://instagram.com/never87" target="_blank">@never87</a></li>
+            -->
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Never87. All rights reserved.</p>
+        <p><em>Actually nothing important here</em></p>
+    </footer>
+</body>
+</html>

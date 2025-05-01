@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Never87">
+    <meta name="keywords" content="blog, 博客, never87, Never87, Ckcolanev87, CkcolanevES">
+    <meta name="description" content="private blog">
+    <meta http-equiv="refresh" content="60">
+    <title>Never87's base</title>
+    <link rel="icon" href="./static/images/Ckcolanev87.ico" type="image/x-icon">
+    <style>
+        /* General Styles */
+
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        /* Animated gradient background */
+        background: linear-gradient(120deg,rgb(254, 253, 253),rgb(229, 222, 222), rgb(249, 251, 246),rgb(252, 253, 252));
+        background-size: 400% 400%;
+        animation: gradientBG 60s ease infinite;
+        color: #2d2d2d;
+        min-height: 100vh;
+        }
+
+        @keyframes gradientBG {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+        /* Ensure smooth loop by matching 0% and 100% */
+    }
+    
+    p {
+        font-family: 'Fira Sans', 'Nunito', 'Segoe UI', 'Arial', sans-serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.08em;
+        text-shadow: 0 1px 2px rgba(200,200,200,0.15);
+        color: #444;
+    }
+
+
+    h1 {
+        font-family: 'Montserrat', 'Segoe UI', 'Arial Black', 'Arial', sans-serif;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-shadow: 0 2px 8px rgba(106,17,203,0.12);
+    }
+
+    /* Dropdown Menu Styles */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropbtn {
+        color: rgb(224, 224, 224);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    .dropdown-content-large {
+        display: block;
+        position: absolute;
+        left: 0%;
+        top: 130%;
+        transform: translateX(0%);
+        background-color: rgba(32, 32, 32, 0.91);
+        color: white;
+        padding: 0rem 0;
+        min-width: 200px;
+        max-width: 90vw;
+        width: auto;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: max-height 0.5s cubic-bezier(.4,0,.2,1), opacity 0.2s;
+        white-space: nowrap;
+    }
+
+    .dropdown:hover .dropdown-content-large {
+        max-height: 2000px; /* 足够大即可 */
+        opacity: 1;
+        padding: 0rem 0;
+    }
+
+    .dropdown-column {
+        padding: 0.5rem;
+    }
+
+    .dropdown-column h4 {
+        margin-bottom: 0.5rem;
+        color: #6a11cb;
+    }
+
+    .dropdown-column ul {
+        list-style: none;
+        margin-left: 0rem;
+        padding: 0;
+    }
+
+    .dropdown-column ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .dropdown-column ul li a {
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .dropdown-column ul li a:hover {
+        color: #6a11cb;
+    }
+
+    /* Header Styles */
+    header {
+        background: linear-gradient(135deg,rgb(32, 32, 32),rgb(60, 60, 60));
+        color: white;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    header p {
+        font-size: 1.2rem;
+        margin-top: 0.5rem;
+    }
+
+    /* Navigation Styles */
+    nav {
+        background: linear-gradient(135deg, rgb(32, 32, 32), rgb(60, 60, 60));
+        color: #2a2a2a;
+        padding: 0.5rem 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        margin: 0;
+        padding: 0;
+        margin-left: 15rem;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 0;
+        font-size: 1.1rem;
+        letter-spacing: 0.05em;
+    }
+
+    nav ul li a {
+        color:rgb(224, 224, 224);
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+        color: #6a11cb;
+    }
+
+    /* Section Styles */
+    section {
+        padding: 2rem;
+        margin: 1rem auto;
+        max-width: 800px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+    }
+
+    section a {
+        text-decoration: none;
+        font-family: 'Fira Sans', 'Nunito', 'Segoe UI', 'Montserrat', 'Arial Rounded MT Bold', 'Arial', sans-serif;
+        font-size: 1.25rem;
+        font-weight: bold;
+        font-weight: 600;
+        color: #2575fc;
+        letter-spacing: 0.04em;
+        display: inline-block;
+        margin-top: 0;
+        transition: transform 0.2s;
+    }
+    section a:hover {
+        transform: scale(1.18);
+    }
+
+    section h2 {
+        color: #6a11cb;
+        margin-bottom: 1rem;
+    }
+
+    section p {
+        margin-bottom: 1rem;
+    }
+
+    section img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-top: 1rem;
+    }
+
+    /* Article Styles */
+    article {
+        margin-bottom: 2rem;
+    }
+
+    article h3 {
+        color: #2575fc;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+
+    article p {
+        margin-bottom: 0.5rem;
+        letter-spacing: 0.1em;
+        font-family: 'KaiTi', '楷体', 'STKaiti', 'KaiTi_GB2312', serif;
+        font-size: 1.25rem;
+    }
+
+    /* Contact Section Styles */
+    #contact ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #contact ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    #contact ul li a {
+        color: #2575fc;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    #contact ul li a:hover {
+        color: #6a11cb;
+    }
+
+    /* Footer Styles */
+    footer {
+        text-align: center;
+        background: linear-gradient(135deg, rgb(32, 32, 32), rgb(60, 60, 60));
+        color: white;
+        padding: 1rem 0;
+        margin-top: 2rem;
+    }
+
+    footer p {
+        margin: 0;
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>Welcome to Never87's Blog</h1>
+        <p>My daily dose of thoughts, ideas, and inspiration.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Projects</a>
+                <div class="dropdown-content-large">
+                    <div class="dropdown-column">
+                        <h4>Projects</h4>
+                        <ul>
+                            <li><a href="#shootgame">Shoot Game</a></li>    
+                        </ul>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#stickytopics">Sticky topics</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <a href=".\index.html" style="display: inline-flex; align-items: center;">
+            <span style="font-size: 1.5rem; margin-right: 0.3em;">&#8598;</span> home
+        </a>
+        <p>
+            
+        </p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Never87. All rights reserved.</p>
+        <p><em>Actually nothing important here</em></p>
+    </footer>
+</body>
+</html>
