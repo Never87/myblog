@@ -3,7 +3,7 @@ import markdown
 from pathlib import Path
 
 # 配置路径
-POSTS_DIR = Path("static/posts")
+POSTS_DIR = Path("posts")
 PUBLIC_DIR = Path("public")
 TEMPLATE = Path("templates/post.html").read_text()
 

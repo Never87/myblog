@@ -1,74 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Never87">
-    <meta name="keywords" content="blog, 博客, never87, Never87, Ckcolanev87, CkcolanevES">
-    <meta name="description" content="private blog">
-    <meta http-equiv="refresh" content="60">
-    <title>Never87's base</title>
-    <link rel="icon" href="./static/images/Ckcolanev87.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./static/css/default.css">
-
+  <title>我的文章</title>
+  <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-    <header>
-        <h1>Welcome to Never87's Blog</h1>
-        <p>My daily dose of thoughts, ideas, and inspiration.</p>
-    </header>
-
-    <nav>
-        <ul>
-            <li class="dropdown">
-                <a href="javascript:void(0)" class="dropbtn">Projects</a>
-                <div class="dropdown-content-large">
-                    <div class="dropdown-column">
-                        <h4>Projects</h4>
-                        <ul>
-                            <li><a href="./shootgame.html">Shoot Game</a></li>    
-                        </ul>
-                    </div>
-                    <div class="dropdown-column">
-                        <h4>Passegers</h4>
-                        <ul>
-                            <li>
-                                <a href="./smalltalks.html">
-                                    Small Talks
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./mathematicaldiscourse.html">
-                                    Mathematical discourse
-                                </a>
-                            </li>
-                            <li>
-                                <a href="./algorithm.html">
-                                    Algorithm
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#stickytopics">Sticky topics</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div id="content">
-        <section>
-            <a href=".\index.html" style="display: inline-flex; align-items: center;">
-                <span style="font-size: 1.2rem; margin-right: 0.3em;">&#8598;</span> home
-            </a>
-            {{content}}
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Never87. All rights reserved.</p>
-        <p><em>Actually nothing important here</em></p>
-    </footer>
+  <div class="content">
+    {{content}}  <!-- Markdown 内容插入此处 -->
+  </div>
 </body>
 </html>
