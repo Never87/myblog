@@ -40,6 +40,16 @@ h1 {
     text-shadow: 0 2px 8px rgba(106,17,203,0.12);
 }
 
+h4 {
+    font-family: 'Montserrat', 'Segoe UI', 'Arial Black', 'Arial', sans-serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    letter-spacing: 0.06em;
+    color: #2575fc;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 1px 4px rgba(106,17,203,0.10);
+}
+
 /* Dropdown Menu Styles */
 .dropdown {
     position: relative;

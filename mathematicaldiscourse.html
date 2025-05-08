@@ -14,6 +14,21 @@
 
 </head>
 <body>
+    <script>
+        fetch('index.html')
+        .then(response => respose.text())
+        .then(data => {
+            document.getElementById('head').innerHTML = data;
+        });
+    </script>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $('#head').load('index.html')
+        });
+    </script> -->
+
     <header>
         <h1>Welcome to Never87's Blog</h1>
         <p>My daily dose of thoughts, ideas, and inspiration.</p>
@@ -43,8 +58,12 @@
                                     Mathematical discourse
                                 </a>
                             </li>
+                            <li>
+                                <a href="./algorithm.html">
+                                    Algorithm
+                                </a>
+                            </li>
                         </ul>
-                        
                     </div>
                 </div>
             </li>
