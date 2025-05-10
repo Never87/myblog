@@ -1,0 +1,829 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/Ckcolanev87.png">
+  <link rel="icon" href="/img/Ckcolanev87.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Never87">
+  <meta name="keywords" content="Never87 never87 Ckcolanev87">
+  
+    <meta name="description" content="Also you can try oi wiki">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The way of algorithm learning.">
+<meta property="og:url" content="https://never87.ddns-ip.net/2025/05/09/algorithm/index.html">
+<meta property="og:site_name" content="Never87">
+<meta property="og:description" content="Also you can try oi wiki">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-05-09T07:00:10.054Z">
+<meta property="article:modified_time" content="2025-05-09T07:19:33.805Z">
+<meta property="article:author" content="Never87">
+<meta property="article:tag" content="algorithm">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>The way of algorithm learning. - Never87</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"never87.ddns-ip.net","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":80,"cursorChar":"_","loop":"truetrue","scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+
+  <!-- KaTeX 样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+
+  <!-- KaTeX 脚本 -->
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body);"></script>
+
+  <script>
+    new Valine({
+        el:'#vcomment',
+        appId: '57SOV6baW8EH9SPzVhdsndBt-MdYXbMMI',
+        appKey: 'N6ZkmnWtVaUNnw7QfRWoOY5Z'
+    })
+  </script>
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Never87&#39;s blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/bg/space.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="The way of algorithm learning."></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2025-05-09 15:00" pubdate>
+          May 9, 2025 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.5k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          13 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">The way of algorithm learning.</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <link rel="stylesheet" href="/css/default.css">
+<section>
+<article>
+    <h2>这是一篇摘录的文章，不是原创</h2>
+    <h2>目录</h2>
+    <h3><b>1、</b><a href="#1">基础必会</a></h3>
+    <h3><b>2、</b><a href="#2">重点考察</a></h3>
+    <h3><b>3、</b><a href="#3">不太会考</a></h3>
+    <h3><b>4、</b><a href="#4">考也不会（大佬除外）</a></h3>
+    <br>
+    <div id="1">
+        <h4>基础必会 常考的基础算法和知识点</h4>
+        <p>
+            <h4>暴力算法</h4>
+            <b>1、简单模拟</b><br>
+            <b>2、简单递推</b><br>
+            <b>3、线性枚举</b><br>
+            <br>
+            <h4>基础排序</h4>
+            <b>1、冒泡排序</b><br><b>2、选择排序</b><br><b>3、插入排序</b><br><b>4、计数排序</b><br><b>5、接口调用（sort函数）</b><br><b>6、比较函数cmp()</b><br><b>7、结构体排序</b><br>
+            <i>*注：这几个要会手写，不是说考试会考而是这几个是最最最基础的，如果这么基础的你都懒得学，那你算法还不如不学。</i>
+            <br><br>
+            <h4>基础数据结构</h4>
+            <b>1、顺序表（数组）</b><br>
+            <b>2、单链表</b><br>
+            <b>3、双链表</b><br>
+            <b>4、栈</b><br>
+            <b>5、队列</b><br>
+            <b>6、二叉树</b><br>
+            <br>
+            <h4>基础搜索</h4>
+            <h4>基本搜索算法</h4>
+            <b>深度优先算法dfs</b><br>
+            <p>求解所有解，n比较小，比如n=10,n=16,n大的话贪心或动态规划</p>
+            <b>广度优先算法bfs</b><br>
+            <p>最短方案</p>
+            <br><br>
+            <h4>基础动态规划</h4>
+            <h4>动态规划的基础应用</h4>
+            <b>线性DP</b><br>
+            <b>记忆化搜索</b><br>
+            <b>最大连续子序列（最大子段和）</b><br>
+            <b>最长单调子序列（LIS(longest increasing sequence)）</b><br>
+            <b>最长公共子序列（LCS(longest common sequence)）</b><br>
+            <b>二维DP、多维DP</b><br>
+            <i>注：低维解决不了升维</i>
+            <i>注：动态规划自己想有难度，建议查阅资料，学知识不丢人</i>
+            <br><br>
+            <h4>初高中基础数学</h4>
+            加减乘除<br>取模<br>整除<br>取整（floor ceil）<br><b>解方程</b>
+            <i>代数方法或数值方法，如二分法、牛顿迭代法。</i>
+            <br><b>指数</b><br>
+            <b>对数</b>
+            <b>三角函数</b>
+        </p>
+    </div>
+
+    <div id="2">
+        <h4>重点考察 国赛重点</h4><h4>国赛常考的进阶算法与知识点</h4>
+        <h4>基础优化算法</h4>
+        <b>1、贪心</b><p>贪心算法是在每一部选择中都采取当先状态下最优的选择，希望通过局部最优达到全局最优。贪心算法的关键是证明贪心策略的正确性，并非所有问题都适合贪心算法。常见的应用有活动选择问题，哈夫曼编码等。</p><br>
+        <b>2、哈希</b><p>哈希算法时将元素储存到一个特殊的容器中，这个容器可以快速插入和查找、一般时间复杂度为O(1),经典的 梦开始的地方——两位数之和，就可以采用哈希表快速进行统计。</p><br>
+        <b>3、前缀和+差分</b><p>前缀和是指一个数组中，从第一个元素到第i个元素的和。差分是前缀和的逆运算，用于快速查询区间元素的值。前缀和和差分可以见区间查询的时间复杂度从O(n)降低到O(1)。</p><br>
+        <b>4、双指针</b><p>双指针是指用两个指针在数组或链表上移动，已解决一些特定的问题。可以分为同相双指针和相向双指针，常用于查找子数组、判断链表是否有环等。双指针可以减低时间复杂度，提高算法效率。</p><br>
+        <b>5、滑动窗口</b><p>滑动窗口是一种特殊的双指针技术，通过维护一个固定大小的窗口在数组或字符串上移动。可以用于解决一些连续子数组或子字符串的问题，如最大子数组和。滑动窗口的关键是确定窗口大小和移动规则。</p><br>
+        <b>6、二分</b><p>二分查找是在有序数组中查找某个元素的高效算法，时间复杂度为O(lgn)。二分查找的关键是确定查找区间和中间位置，不断缩小查找范围，二分查找可以应用于很多问题，如查找最小值、最大值等。</p><br>
+        <br>
+        <h4>进阶排序</h4>
+        <h4>更高效的排序算法</h4>
+        <b>1、快速排序</b><br><b>2、归并排序</b>
+        <br><br>
+        <h4>进阶数据结构</h4>
+        <b>1、哈希表<br>2、字符串hash<br>3、堆<br>4、并查集<br>5、树状数组<br>6、ST表<br>7、线段树<br>8、字典树</b><br>
+        <br>
+        <h4>进阶动态规划</h4><h4>复杂的动态规划问题</h4>
+        <b>1、01背包<br>2、完全背包<br>3、多重背包<br>4、分组背包<br>5、书上分组背包<br>6、基础树形DP<br>7、树的重心<br>8、区间DP<br>9、数位DP<br>10、状压DP</b><br>
+        <br>
+        <h4>图论算法</h4>
+        <h4>最短路</h4>
+            <b>(1) Dijkstra<br>
+                (2) Bellman-Ford<br>
+                (3) Floyed
+                (4) SPFA
+                (5) Dijkstra + Heap
+            </b>
+        <h4>最小生成树</h4>
+            (1) prim<br>
+            (2) kruskal<br>
+        <h4>最近公共祖先</h4>
+            (1) 深度迭代<br>
+            (2) RMQ找最小值找公共祖先<br>
+        <br><br>
+        <h4>数学</h4>
+        <h4>初等数论</h4>
+        <p>整除、素数、素数筛选、最大公约数、最小公倍数、因字数、因子和、因式分解、二分快速幂、线性同余、逆元、欧拉函数、欧拉定理、中国剩余定理、威尔逊定理、卢卡斯定理、证书分块 等等</p>
+        <h4>容斥原理</h4>
+        <p>容斥原理是用于计算多个集合的并集的元素个数的原理。可以通过枚举集合的组合来计算并寄的元素个数。容斥原理在组合数学和算法中有广泛的应用。</p>
+        <h4>二项式定理</h4>
+        <p>通过二项式定理来展开多项式，在组合数学和算法中有重要应用。</p>
+    </div>
+
+    <div id="3">
+        <h3>不太会考的（但OI和ACM得学啊）</h3>
+        <h4>不太常见的排序算法</h4>
+        <b>1、桶排序<br>1、堆排序<br>1、基数排序</b>
+        <br><br>
+        <h4>搜索</h4><h4>特殊的搜索算法</h4>
+        <b>1、搜索剪枝<br>2、双向广搜<br>3、IDA*<br>4、启发式搜索</b>
+        <br><br>
+        <h4>图论算法</h4>
+        <b>1、欧拉回环<br>2、拓扑排序<br>3、二分匹配<br>4、强连通分量<br>5、双连通分量</b><br><br> 
+        <h4>数学</h4>
+        <b>高斯消元<br>Pollard's rho</b>
+    </div>
+
+    <div id="4">
+        <h3>我要成为大佬！！！</h3>
+        <h4>复杂算法与数据结构</h4>
+        <b>1、DP斜率优化<br>2、复杂计算机和<br>3、概率题<br>4、博弈<br>5、AC自动机<br>6、扩展kmp<br>7、后缀数组<br>8、后缀自动机<br>9、回文自动机<br>10、最小割最大流<br>11、最小费用最大流<br>12、一般图匹配<br>13、生成函数(步豪！是H(λ))<br>14、莫比乌斯反演<br>15、快速傅里叶变换<br>16、二次互反律</b>
+        
+    </div>
+</article>
+</section>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Algorithm/" class="category-chain-item">Algorithm</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/algorithm/" class="print-no-link">#algorithm</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>The way of algorithm learning.</div>
+      <div>https://never87.ddns-ip.net/2025/05/09/algorithm/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Never87</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>May 9, 2025</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2025/05/09/About-Pascals-Triangle/" title="About Pascal&#39;s Triangle">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">About Pascal&#39;s Triangle</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2025/05/09/MyIdeaOfTheSleep/" title="My Idea about The sleep">
+                        <span class="hidden-mobile">My Idea about The sleep</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"57SOV6baW8EH9SPzVhdsndBt-MdYXbMMI","appKey":"N6ZkmnWtVaUNnw7QfRWoOY5Z","path":"window.location.pathname","placeholder":"Enter your name and then comment","avatar":"retro","meta":["nick"],"requiredFields":["nick"],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":"","emojiMaps":null,"enableQQ":true},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [
+        { left: "$$", right: "$$", display: true },
+        { left: "$", right: "$", display: false }
+      ]
+    });
+  });
+</script>
+
+<div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://github.com/Never87" target="_blank" rel="nofollow noopener"> <i class="iconfont icon-github-fill" style="font-size: 1.2em; vertical-align: middle; margin-bottom: 2px;"></i> </a> <br> Never87 
+    </div>
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
