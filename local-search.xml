@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>About Ascii Interchange(American Standard Code for Information Interchange)</title>
+    <link href="/2025/05/28/asciicolor/"/>
+    <url>/2025/05/28/asciicolor/</url>
+    
+    <content type="html"><![CDATA[<h4 id="About-Ascii-Interchange">About Ascii Interchange</h4><p>the core char : “\033[#m”, &quot;#&quot;represent: the style of the text or the background. such as 2 is dim, 5 and 6 are flashing, 8 is invisible text, 21 is double underlined, 30 is black text, 37 is white text, 40 is black background, and 53 is an upward line. You can check all the styles by the command:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br><span class="hljs-type">int</span> i = <span class="hljs-number">-14</span>;<br><span class="hljs-keyword">for</span> (i = <span class="hljs-number">-14</span>; i &lt;= <span class="hljs-number">150</span>; i++)<br>&#123;<br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\033[%dmthe quick brown fox jumps over a lazy dog\033[0m\t%d\n&quot;</span>, i, i);<br>&#125;<br><span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure><p>It’s from <a href="https://blog.csdn.net/Blaze_dL/article/details/142767515">https://blog.csdn.net/Blaze_dL/article/details/142767515</a> you can find the original author’s codes.</p><p>And you can also add the color by adding some ‘;’ after the first style number. and the first one: only has two options–2 and 5,  use 5 and the second number to show the fixed color, use 2;R;G;B to show nearly all the color we’ve ever seen, and the second one  is from 0 to 256, you can also check the colors by the codes:</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">256</span>; i++) &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\033[38;5;%dmTExt\033[0m\t&quot;</span>, i);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\033[48;5;%dm    \033[0m\t&quot;</span>, i);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, i);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure><p>You might wonder why 38 and 48 are used here, as they don’t seem to make a difference in font style, well, but it definitely represents the front color and the background color.</p><p>Finally as I also mentioned before, you can use 38 or 48 ‘;’ 2 ‘;’ and add RGB after ‘;’ to show the rgb color. And I’ll put the Image so I can find the style and the color  conveniently.</p><h4 id="Style-and-the-fixed-color">Style and the fixed color</h4><h5 id="style">style:</h5><div align="center"><img src="/img/ascii_interchange/styles.png" /></div><h5 id="fixed-color">fixed color:</h5><div align="center"><img src="/img/ascii_interchange/;5;color.png" /></div>]]></content>
+    
+    
+    <categories>
+      
+      <category>Programming</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>programming</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>熄灯问题</title>
+    <link href="/2025/05/13/%E7%86%84%E7%81%AF%E9%97%AE%E9%A2%98/"/>
+    <url>/2025/05/13/%E7%86%84%E7%81%AF%E9%97%AE%E9%A2%98/</url>
+    
+    <content type="html"><![CDATA[<h4 id="题目来源">题目来源:</h4><p><a href="http://bailian.openjudge.cn/practice/2811/">OpenJudge - 2811:熄灯问题</a></p><p>目前还没完成，题解如下：</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;bits/stdc++.h&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> std;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    <br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>Algorithm</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>algorithm</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>About Pascal&#39;s Triangle</title>
     <link href="/2025/05/09/About-Pascals-Triangle/"/>
     <url>/2025/05/09/About-Pascals-Triangle/</url>
