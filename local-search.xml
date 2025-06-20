@@ -4,6 +4,56 @@
   
   
   <entry>
+    <title>SDL3_ttf的构建与配置</title>
+    <link href="/2025/06/20/SDL&amp;SDL_ttf/"/>
+    <url>/2025/06/20/SDL&amp;SDL_ttf/</url>
+    
+    <content type="html"><![CDATA[<h2 id="SDL3-ttf的配置">SDL3_ttf的配置</h2><p>​包括我，很多c/c++工程开发新手朋友会在第三方库的自行构建方面出现问题。由于我是个新手，其他的库我就不说了，就来说说SDL_ttf在Windows平台的构建步骤以及会遇到的问题吧。（如果嫌排版乱的话可以放大看哦）</p><p>​首先我们需要SDL3库本身的源码：（从github下载源码肯定会吧）</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/libsdl-org/SDL.git<br></code></pre></td></tr></table></figure><h4 id="SDL3-ttf构建第一步：SDL3库的构建">SDL3_ttf构建第一步：SDL3库的构建</h4><p>​当然你看到这篇文章时可能SDL又进行了更新，不过应该差别不大，要是不行的话还是去寻找其他教程吧。对于3.2.16版本，包根目录下应该会有个CMakeList.txt文件，不用管它（我当时在这吃了一个小亏），打开VisualC文件夹*（真的新手还是下个Visual Studio吧，对于Windows平台开发还算是挺方便的）*里面有个SDL.sln文件，用Visual Studio打开，好像是直接生成就行（来看这个教程的SDL3应该都构建完能正常跑程序了吧{？。？}），确保.lib或.dll文件放在一个固定的位置别删了，可以先写个项目跑一下（新手注意三点：一要头文件、二要库文件(.lib/.dll)、三要链接）能正常运行说明可以了不能的话。。。。<em>找其他教程去吧~AwA</em>。</p><h4 id="第二步：SDL3-ttf本身的构建">第二步：SDL3_ttf本身的构建</h4><p>​这一步对于我这种人来说比较玄学，明明都按照官方的步骤走了…嘶…怎么就是不对啊？！1点了？我想睡觉~~~…有时候整来整去，整到了半夜，结果整出来7、8个G，杂七杂八的库、工具都来了，当然我说的不是SDL3_ttf这个库，别害怕啊QwQ。</p><p>​首先我们根据：<a href="https://github.com/libsdl-org/SDL_ttf/blob/main/docs/INTRO-visualstudio.md">Introduction to SDL_ttf with Visual Studio</a>（官方文档）的指引：</p><h4 id="（怕你累着，给你个跳转点，点右边列表里的字就能跳转）">（怕你累着，给你个跳转点，点右边列表里的字就能跳转）</h4><p>使用 SDL_ttf 的最简单方法是将其与 SDL 一起作为子项目包含在项目中。</p><p>首先，确保您已下载外部依赖项。您可以通过在外部目录中运行来执行此作。<code>Get-GitModules.ps1</code></p><p>首先，我们将创建一个简单的项目来构建和运行 <a href="https://github.com/libsdl-org/SDL_ttf/blob/main/docs/hello.c">hello.c</a></p><ul><li>使用 C++ 空项目模板在 Visual Studio 中创建新项目</li><li>将 hello.c 添加到源文件</li><li>右键单击解决方案，选择“添加现有项目”，导航到 SDL VisualC/SDL 目录并添加SDL.vcxproj</li><li>右键单击解决方案，选择 Add an existing project（添加现有项目），导航到 SDL_ttf VisualC 目录并添加SDL_ttf.vcxproj</li><li>选择您的SDL_ttf项目，然后转到 Project -&gt; Add Reference，然后选择 SDL3</li><li>选择您的SDL_ttf项目并转到 Project -&gt; Properties，将顶部的过滤器设置为“All Configurations”和“All Platforms”，选择 VC++ 目录并修改“Include Directories”中的默认 SDL 路径以指向您的 SDL 包含目录</li><li>选择您的主项目，然后转到 Project -&gt; Add Reference，然后选择 SDL3 和 SDL3_ttf</li><li>选择您的主项目并转到 Project -&gt; Properties，将顶部的过滤器设置为“All Configurations”和“All Platforms”，选择 VC++ 目录并将 SDL 和 SDL_ttf include 目录添加到“Include Directories”中</li><li>构建并运行！</li></ul><h4 id="（跳转点）">（跳转点）</h4><p>首先第一步，打开包根目录，里面有external文件夹，打开，里面又有Get-GitModules.ps1文件，但这个东西没“魔法”的话可能下载不了，这步很关键，如果直接下载不了的话。。。别急通过查看.ps1和.sh文件不难发现其实就是从github上把所需的代码库给拷贝过来，本质就是git clone，这四个库的链接在下面（如果.ps1或.sh已经下载了一半，一定要确保下载的文件齐全，其实可以看看包根目录有没有<strong>文件</strong>缺失，没有缺失基本上没啥问题，把剩下的手动下载一下，不放心的可以全部自己下）：</p><p>freetype: <a href="https://github.com/libsdl-org/freetype/tree/d3a395b5fe515fd5c31d263bfc03fd85dd381a8f">libsdl-org/freetype at d3a395b5fe515fd5c31d263bfc03fd85dd381a8f</a></p><p>harfbuzz: <a href="https://github.com/libsdl-org/harfbuzz/tree/fbb8d128270da81725538a6cc5427e1a155a6580">libsdl-org/harfbuzz at fbb8d128270da81725538a6cc5427e1a155a6580</a></p><p>plutosvg: <a href="https://github.com/libsdl-org/plutosvg/tree/dc5ea47b2519205a2924bbf9e505c1aac6573109">libsdl-org/plutosvg at dc5ea47b2519205a2924bbf9e505c1aac6573109</a></p><p>plutoovg: <a href="https://github.com/libsdl-org/plutovg/tree/c42264b70c4fbb22d33217580fd9b077c7b3a62c">libsdl-org/plutovg at c42264b70c4fbb22d33217580fd9b077c7b3a62c</a></p><h4 id="ok，接下来总算到构建了！">ok，接下来总算到构建了！</h4><p>跟着教程走~打开Visual Studio创建一个空项目，接下来在创建的项目中新建一个源文件（不然下面项目属性找不到VC++ 目录了），文件叫做hello.c就是这个<a href="https://github.com/libsdl-org/SDL_ttf/blob/main/docs/hello.c">hello.c</a>（当然我试了，啥也不写就写个空的main()，也不影响构建，功能也齐全够用）然后右键最外层的解决方案（创建项目时把项目和解决方案分开，别放同一目录）</p><div align="center"><img src="/img/SDL_ttf/SDL_ttf.png" /></div><p>添加-&gt;现有项目，在上次下的SDL3的包（我的是3.2.16版本）中有个VisualC打开，里面有SDL，打开，里面有SDL.vcxproj文件，打开就行。然后再添加一个现有项：SDL_ttf中的VisualC中有SDL_ttf.vcxproj。添加完后，解决方案管理器中左键一下SDL3_ttf项目，然后在窗口顶端菜单中找到项目-&gt;添加引用（VS2022叫项目依赖），然后选择SDL3(如果没有，右键点击SDL3这个项目，生成或重新生成一下)。接着关掉，打开项目-&gt;属性（有属性二字或看起来像属性的那个），弹出的窗口上过滤器选所有配置和所有平台，左侧点VC++ 目录（对上面提了一嘴），右面找到包含目录，添加以前下的SDL3包中的include文件夹的目录（…\…\include\），接着找到最开始创建的那个添加了hello.c的项目，项目-&gt;添加引用（VS2022叫做项目依赖项）把SDL3和SDL_ttf勾选。接着打开这个项目的项目配置，VC++ 目录 包含目录 ，把${ProjectDir}…\SDL\include那项，改成绝对路径，(比如C:\AwA\QwQ\HHH\SDL3.114515.16\include)，然后按顺序右键点击并生成（或重新生成，生成过了报错的重新生成试试）先SDL3再SDL3_ttf再你创建的那个，然后搞定！！去项目文件夹下\x64(or 其他)\Debug(or Release)\ 下领取你的奖励吧！——能正常运行的.lib和.dll文件！</p><p>最后祝大家每天都能早睡觉，开开心心，顺顺利利，有条件的评个论行不行QuQ，我想知道有没有人碰巧看到了这个小网站。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Programming</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>programming</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>PVPGAME</title>
+    <link href="/2025/06/18/PVPGAME/"/>
+    <url>/2025/06/18/PVPGAME/</url>
+    
+    <content type="html"><![CDATA[<h3 id="PVPGAME">PVPGAME</h3><h4 id="1-技术实现">#1 技术实现</h4><p>编写环境: c++20  cmake 3.31.6</p><p>引用的库: SDL</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>Project</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>game</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>About Ascii Interchange(American Standard Code for Information Interchange)</title>
     <link href="/2025/05/28/asciicolor/"/>
     <url>/2025/05/28/asciicolor/</url>

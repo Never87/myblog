@@ -21,25 +21,24 @@
   <meta name="author" content="Never87">
   <meta name="keywords" content="Never87 never87 Ckcolanev87">
   
-    <meta name="description" content="print colored text or colored blank">
+    <meta name="description" content="SDL3_ttf的配置的具体步骤以及会遇到的问题，根据我个人的经验，凑出来的一篇文章，反正很水就是了AuA">
 <meta property="og:type" content="article">
-<meta property="og:title" content="About Ascii Interchange(American Standard Code for Information Interchange)">
-<meta property="og:url" content="https://never87.ddns-ip.net/2025/05/28/asciicolor/index.html">
+<meta property="og:title" content="SDL3_ttf的构建与配置">
+<meta property="og:url" content="https://never87.ddns-ip.net/2025/06/20/SDL&SDL_ttf/index.html">
 <meta property="og:site_name" content="Never87">
-<meta property="og:description" content="print colored text or colored blank">
+<meta property="og:description" content="SDL3_ttf的配置的具体步骤以及会遇到的问题，根据我个人的经验，凑出来的一篇文章，反正很水就是了AuA">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://never87.ddns-ip.net/img/ascii_interchange/styles.png">
-<meta property="og:image" content="https://never87.ddns-ip.net/img/ascii_interchange/;5;color.png">
-<meta property="article:published_time" content="2025-05-28T01:15:48.340Z">
-<meta property="article:modified_time" content="2025-05-28T01:57:51.435Z">
+<meta property="og:image" content="https://never87.ddns-ip.net/img/SDL_ttf/SDL_ttf.png">
+<meta property="article:published_time" content="2025-06-20T14:14:39.207Z">
+<meta property="article:modified_time" content="2025-06-20T15:39:13.876Z">
 <meta property="article:author" content="Never87">
 <meta property="article:tag" content="programming">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://never87.ddns-ip.net/img/ascii_interchange/styles.png">
+<meta name="twitter:image" content="https://never87.ddns-ip.net/img/SDL_ttf/SDL_ttf.png">
   
   
   
-  <title>About Ascii Interchange(American Standard Code for Information Interchange) - Never87</title>
+  <title>SDL3_ttf的构建与配置 - Never87</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -214,7 +213,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="About Ascii Interchange(American Standard Code for Information Interchange)"></span>
+            <span id="subtitle" data-typed-text="SDL3_ttf的构建与配置"></span>
           
         </div>
 
@@ -225,8 +224,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-05-28 09:15" pubdate>
-          May 28, 2025 am
+        <time datetime="2025-06-20 22:14" pubdate>
+          June 20, 2025 pm
         </time>
       </span>
     
@@ -237,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          132 words
+          1.5k words
         
       </span>
     
@@ -248,7 +247,7 @@
         
         
         
-          2 mins
+          13 mins
         
       </span>
     
@@ -285,24 +284,47 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">About Ascii Interchange(American Standard Code for Information Interchange)</h1>
+            <h1 id="seo-header">SDL3_ttf的构建与配置</h1>
             
             
               <div class="markdown-body">
                 
-                <h4 id="About-Ascii-Interchange">About Ascii Interchange</h4>
-<p>the core char : “\033[#m”, &quot;#&quot;represent: the style of the text or the background. such as 2 is dim, 5 and 6 are flashing, 8 is invisible text, 21 is double underlined, 30 is black text, 37 is white text, 40 is black background, and 53 is an upward line. You can check all the styles by the command:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span><span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>	<span class="hljs-type">int</span> i = <span class="hljs-number">-14</span>;<br>	<span class="hljs-keyword">for</span> (i = <span class="hljs-number">-14</span>; i &lt;= <span class="hljs-number">150</span>; i++)<br>	&#123;<br>		<span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\033[%dmthe quick brown fox jumps over a lazy dog\033[0m\t%d\n&quot;</span>, i, i);<br>	&#125;<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>It’s from <a target="_blank" rel="noopener" href="https://blog.csdn.net/Blaze_dL/article/details/142767515">https://blog.csdn.net/Blaze_dL/article/details/142767515</a> you can find the original author’s codes.</p>
-<p>And you can also add the color by adding some ‘;’ after the first style number. and the first one: only has two options–2 and 5,  use 5 and the second number to show the fixed color, use 2;R;G;B to show nearly all the color we’ve ever seen, and the second one  is from 0 to 256, you can also check the colors by the codes:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c++"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;stdio.h&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>; i &lt;= <span class="hljs-number">256</span>; i++) &#123;<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\033[38;5;%dmTExt\033[0m\t&quot;</span>, i);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\033[48;5;%dm    \033[0m\t&quot;</span>, i);<br>        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, i);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
-<p>You might wonder why 38 and 48 are used here, as they don’t seem to make a difference in font style, well, but it definitely represents the front color and the background color.</p>
-<p>Finally as I also mentioned before, you can use 38 or 48 ‘;’ 2 ‘;’ and add RGB after ‘;’ to show the rgb color. And I’ll put the Image so I can find the style and the color  conveniently.</p>
-<h4 id="Style-and-the-fixed-color">Style and the fixed color</h4>
-<h5 id="style">style:</h5>
-<div align="center"><img src="/img/ascii_interchange/styles.png" srcset="/img/loading.gif" lazyload /></div>
-<h5 id="fixed-color">fixed color:</h5>
-<div align="center"><img src="/img/ascii_interchange/;5;color.png" srcset="/img/loading.gif" lazyload /></div>
+                <h2 id="SDL3-ttf的配置">SDL3_ttf的配置</h2>
+<p>​		包括我，很多c/c++工程开发新手朋友会在第三方库的自行构建方面出现问题。由于我是个新手，其他的库我就不说了，就来说说SDL_ttf在Windows平台的构建步骤以及会遇到的问题吧。（如果嫌排版乱的话可以放大看哦）</p>
+<p>​		首先我们需要SDL3库本身的源码：（从github下载源码肯定会吧）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/libsdl-org/SDL.git<br></code></pre></td></tr></table></figure>
+<h4 id="SDL3-ttf构建第一步：SDL3库的构建">SDL3_ttf构建第一步：SDL3库的构建</h4>
+<p>​		当然你看到这篇文章时可能SDL又进行了更新，不过应该差别不大，要是不行的话还是去寻找其他教程吧。对于3.2.16版本，包根目录下应该会有个CMakeList.txt文件，不用管它（我当时在这吃了一个小亏），打开VisualC文件夹*（真的新手还是下个Visual Studio吧，对于Windows平台开发还算是挺方便的）*里面有个SDL.sln文件，用Visual Studio打开，好像是直接生成就行（来看这个教程的SDL3应该都构建完能正常跑程序了吧{？。？}），确保.lib或.dll文件放在一个固定的位置别删了，可以先写个项目跑一下（新手注意三点：一要头文件、二要库文件(.lib/.dll)、三要链接）能正常运行说明可以了不能的话。。。。<em>找其他教程去吧~AwA</em>。</p>
+<h4 id="第二步：SDL3-ttf本身的构建">第二步：SDL3_ttf本身的构建</h4>
+<p>​		这一步对于我这种人来说比较玄学，明明都按照官方的步骤走了…嘶…怎么就是不对啊？！1点了？我想睡觉~~~…有时候整来整去，整到了半夜，结果整出来7、8个G，杂七杂八的库、工具都来了，当然我说的不是SDL3_ttf这个库，别害怕啊QwQ。</p>
+<p>​		首先我们根据：<a target="_blank" rel="noopener" href="https://github.com/libsdl-org/SDL_ttf/blob/main/docs/INTRO-visualstudio.md">Introduction to SDL_ttf with Visual Studio</a>（官方文档）的指引：</p>
+<h4 id="（怕你累着，给你个跳转点，点右边列表里的字就能跳转）">（怕你累着，给你个跳转点，点右边列表里的字就能跳转）</h4>
+<p>使用 SDL_ttf 的最简单方法是将其与 SDL 一起作为子项目包含在项目中。</p>
+<p>首先，确保您已下载外部依赖项。您可以通过在外部目录中运行来执行此作。<code>Get-GitModules.ps1</code></p>
+<p>首先，我们将创建一个简单的项目来构建和运行 <a target="_blank" rel="noopener" href="https://github.com/libsdl-org/SDL_ttf/blob/main/docs/hello.c">hello.c</a></p>
+<ul>
+<li>使用 C++ 空项目模板在 Visual Studio 中创建新项目</li>
+<li>将 hello.c 添加到源文件</li>
+<li>右键单击解决方案，选择“添加现有项目”，导航到 SDL VisualC/SDL 目录并添加SDL.vcxproj</li>
+<li>右键单击解决方案，选择 Add an existing project（添加现有项目），导航到 SDL_ttf VisualC 目录并添加SDL_ttf.vcxproj</li>
+<li>选择您的SDL_ttf项目，然后转到 Project -&gt; Add Reference，然后选择 SDL3</li>
+<li>选择您的SDL_ttf项目并转到 Project -&gt; Properties，将顶部的过滤器设置为“All Configurations”和“All Platforms”，选择 VC++ 目录并修改“Include Directories”中的默认 SDL 路径以指向您的 SDL 包含目录</li>
+<li>选择您的主项目，然后转到 Project -&gt; Add Reference，然后选择 SDL3 和 SDL3_ttf</li>
+<li>选择您的主项目并转到 Project -&gt; Properties，将顶部的过滤器设置为“All Configurations”和“All Platforms”，选择 VC++ 目录并将 SDL 和 SDL_ttf include 目录添加到“Include Directories”中</li>
+<li>构建并运行！</li>
+</ul>
+<h4 id="（跳转点）">（跳转点）</h4>
+<p>首先第一步，打开包根目录，里面有external文件夹，打开，里面又有Get-GitModules.ps1文件，但这个东西没“魔法”的话可能下载不了，这步很关键，如果直接下载不了的话。。。别急通过查看.ps1和.sh文件不难发现其实就是从github上把所需的代码库给拷贝过来，本质就是git clone，这四个库的链接在下面（如果.ps1或.sh已经下载了一半，一定要确保下载的文件齐全，其实可以看看包根目录有没有<strong>文件</strong>缺失，没有缺失基本上没啥问题，把剩下的手动下载一下，不放心的可以全部自己下）：</p>
+<p>freetype: <a target="_blank" rel="noopener" href="https://github.com/libsdl-org/freetype/tree/d3a395b5fe515fd5c31d263bfc03fd85dd381a8f">libsdl-org/freetype at d3a395b5fe515fd5c31d263bfc03fd85dd381a8f</a></p>
+<p>harfbuzz: <a target="_blank" rel="noopener" href="https://github.com/libsdl-org/harfbuzz/tree/fbb8d128270da81725538a6cc5427e1a155a6580">libsdl-org/harfbuzz at fbb8d128270da81725538a6cc5427e1a155a6580</a></p>
+<p>plutosvg: <a target="_blank" rel="noopener" href="https://github.com/libsdl-org/plutosvg/tree/dc5ea47b2519205a2924bbf9e505c1aac6573109">libsdl-org/plutosvg at dc5ea47b2519205a2924bbf9e505c1aac6573109</a></p>
+<p>plutoovg: <a target="_blank" rel="noopener" href="https://github.com/libsdl-org/plutovg/tree/c42264b70c4fbb22d33217580fd9b077c7b3a62c">libsdl-org/plutovg at c42264b70c4fbb22d33217580fd9b077c7b3a62c</a></p>
+<h4 id="ok，接下来总算到构建了！">ok，接下来总算到构建了！</h4>
+<p>跟着教程走~打开Visual Studio创建一个空项目，接下来在创建的项目中新建一个源文件（不然下面项目属性找不到VC++ 目录了），文件叫做hello.c就是这个<a target="_blank" rel="noopener" href="https://github.com/libsdl-org/SDL_ttf/blob/main/docs/hello.c">hello.c</a>（当然我试了，啥也不写就写个空的main()，也不影响构建，功能也齐全够用）然后右键最外层的解决方案（创建项目时把项目和解决方案分开，别放同一目录）</p>
+<div align="center"><img src="/img/SDL_ttf/SDL_ttf.png" srcset="/img/loading.gif" lazyload /></div>
+<p>添加-&gt;现有项目，在上次下的SDL3的包（我的是3.2.16版本）中有个VisualC打开，里面有SDL，打开，里面有SDL.vcxproj文件，打开就行。然后再添加一个现有项：SDL_ttf中的VisualC中有SDL_ttf.vcxproj。添加完后，解决方案管理器中左键一下SDL3_ttf项目，然后在窗口顶端菜单中找到项目-&gt;添加引用（VS2022叫项目依赖），然后选择SDL3(如果没有，右键点击SDL3这个项目，生成或重新生成一下)。接着关掉，打开项目-&gt;属性（有属性二字或看起来像属性的那个），弹出的窗口上过滤器选所有配置和所有平台，左侧点VC++ 目录（对上面提了一嘴），右面找到包含目录，添加以前下的SDL3包中的include文件夹的目录（…\…\include\），接着找到最开始创建的那个添加了hello.c的项目，项目-&gt;添加引用（VS2022叫做项目依赖项）把SDL3和SDL_ttf勾选。接着打开这个项目的项目配置，VC++ 目录 包含目录 ，把${ProjectDir}…\SDL\include那项，改成绝对路径，(比如C:\AwA\QwQ\HHH\SDL3.114515.16\include)，然后按顺序右键点击并生成（或重新生成，生成过了报错的重新生成试试）先SDL3再SDL3_ttf再你创建的那个，然后搞定！！去项目文件夹下\x64(or 其他)\Debug(or Release)\ 下领取你的奖励吧！——能正常运行的.lib和.dll文件！</p>
+<p>最后祝大家每天都能早睡觉，开开心心，顺顺利利，有条件的评个论行不行QuQ，我想知道有没有人碰巧看到了这个小网站。</p>
+
                 
               </div>
             
@@ -347,8 +369,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>About Ascii Interchange(American Standard Code for Information Interchange)</div>
-      <div>https://never87.ddns-ip.net/2025/05/28/asciicolor/</div>
+      <div>SDL3_ttf的构建与配置</div>
+      <div>https://never87.ddns-ip.net/2025/06/20/SDL&amp;SDL_ttf/</div>
     </div>
     <div class="license-meta">
       
@@ -360,7 +382,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>May 28, 2025</div>
+          <div>June 20, 2025</div>
         </div>
       
       
@@ -392,18 +414,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/06/18/PVPGAME/" title="PVPGAME">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">PVPGAME</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/05/13/%E7%86%84%E7%81%AF%E9%97%AE%E9%A2%98/" title="熄灯问题">
-                        <span class="hidden-mobile">熄灯问题</span>
+                      <a href="/2025/06/18/PVPGAME/" title="PVPGAME">
+                        <span class="hidden-mobile">PVPGAME</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
