@@ -30,7 +30,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://never87.ddns-ip.net/img/SDL_ttf/SDL_ttf.png">
 <meta property="article:published_time" content="2025-06-20T14:14:39.207Z">
-<meta property="article:modified_time" content="2025-06-20T15:39:13.876Z">
+<meta property="article:modified_time" content="2025-06-21T04:29:37.018Z">
 <meta property="article:author" content="Never87">
 <meta property="article:tag" content="programming">
 <meta name="twitter:card" content="summary_large_image">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.5k words
+          1.6k words
         
       </span>
     
@@ -247,7 +247,7 @@
         
         
         
-          13 mins
+          14 mins
         
       </span>
     
@@ -320,7 +320,7 @@
 <p>plutosvg: <a target="_blank" rel="noopener" href="https://github.com/libsdl-org/plutosvg/tree/dc5ea47b2519205a2924bbf9e505c1aac6573109">libsdl-org/plutosvg at dc5ea47b2519205a2924bbf9e505c1aac6573109</a></p>
 <p>plutoovg: <a target="_blank" rel="noopener" href="https://github.com/libsdl-org/plutovg/tree/c42264b70c4fbb22d33217580fd9b077c7b3a62c">libsdl-org/plutovg at c42264b70c4fbb22d33217580fd9b077c7b3a62c</a></p>
 <h4 id="ok，接下来总算到构建了！">ok，接下来总算到构建了！</h4>
-<p>跟着教程走~打开Visual Studio创建一个空项目，接下来在创建的项目中新建一个源文件（不然下面项目属性找不到VC++ 目录了），文件叫做hello.c就是这个<a target="_blank" rel="noopener" href="https://github.com/libsdl-org/SDL_ttf/blob/main/docs/hello.c">hello.c</a>（当然我试了，啥也不写就写个空的main()，也不影响构建，功能也齐全够用）然后右键最外层的解决方案（创建项目时把项目和解决方案分开，别放同一目录）</p>
+<p>跟着教程走~打开Visual Studio创建一个空项目，接下来在创建的项目中新建一个源文件（不然下面项目属性找不到VC++ 目录了），文件叫做hello.c就是这个<a target="_blank" rel="noopener" href="https://github.com/libsdl-org/SDL_ttf/blob/main/docs/hello.c">hello.c</a>（当然我试了，啥也不写就写个空的main()，也不影响构建，功能也齐全够用）记得为你创建的项目链接一下SDL3.lib和SDL3_ttf.lib，并附加库目录（连接器-&gt;常规-&gt;附加库目录）$(SolutionDir)x64\Debug然后右键最外层的解决方案（创建项目时把项目和解决方案分开，别放同一目录）</p>
 <div align="center"><img src="/img/SDL_ttf/SDL_ttf.png" srcset="/img/loading.gif" lazyload /></div>
 <p>添加-&gt;现有项目，在上次下的SDL3的包（我的是3.2.16版本）中有个VisualC打开，里面有SDL，打开，里面有SDL.vcxproj文件，打开就行。然后再添加一个现有项：SDL_ttf中的VisualC中有SDL_ttf.vcxproj。添加完后，解决方案管理器中左键一下SDL3_ttf项目，然后在窗口顶端菜单中找到项目-&gt;添加引用（VS2022叫项目依赖），然后选择SDL3(如果没有，右键点击SDL3这个项目，生成或重新生成一下)。接着关掉，打开项目-&gt;属性（有属性二字或看起来像属性的那个），弹出的窗口上过滤器选所有配置和所有平台，左侧点VC++ 目录（对上面提了一嘴），右面找到包含目录，添加以前下的SDL3包中的include文件夹的目录（…\…\include\），接着找到最开始创建的那个添加了hello.c的项目，项目-&gt;添加引用（VS2022叫做项目依赖项）把SDL3和SDL_ttf勾选。接着打开这个项目的项目配置，VC++ 目录 包含目录 ，把${ProjectDir}…\SDL\include那项，改成绝对路径，(比如C:\AwA\QwQ\HHH\SDL3.114515.16\include)，然后按顺序右键点击并生成（或重新生成，生成过了报错的重新生成试试）先SDL3再SDL3_ttf再你创建的那个，然后搞定！！去项目文件夹下\x64(or 其他)\Debug(or Release)\ 下领取你的奖励吧！——能正常运行的.lib和.dll文件！</p>
 <p>最后祝大家每天都能早睡觉，开开心心，顺顺利利，有条件的评个论行不行QuQ，我想知道有没有人碰巧看到了这个小网站。</p>
@@ -413,6 +413,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2025/06/29/solution/" title="百度之星比赛题目讲解">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">百度之星比赛题目讲解</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
